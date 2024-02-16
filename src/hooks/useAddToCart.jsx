@@ -1,14 +1,10 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { contextShoppingCart } from '../context/ShoppingCartContext';
 import { contextProducts } from '../context/ProductsContext';
 
 const useAddToCart = () => {
   const { shoppingCart, setShoppingCart } = useContext(contextShoppingCart);
   const { handleGetProductId } = useContext(contextProducts)
-
-  useEffect(() => {
-    console.log(shoppingCart)
-  }, [shoppingCart])
 
   const handleAddToCart = (productId) => {
     if (shoppingCart.find((product) => product.id === productId && product) !== undefined) {
@@ -18,7 +14,7 @@ const useAddToCart = () => {
       setShoppingCart(products)
     } else {
       const product = handleGetProductId(productId);
-      setShoppingCart([...shoppingCart, {...product, quantity: product.quantity + 1}]);
+      setShoppingCart([...shoppingCart, { ...product, quantity: product.quantity + 1 }]);
     }
   };
   return {

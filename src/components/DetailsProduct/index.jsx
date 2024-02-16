@@ -9,7 +9,6 @@ const DetailsProduct = () => {
   const [productDetails, setProductDetails] = useState({});
 
   const handleGetDate = (dateString) => {
-    console.log(dateString)
     const date = new Date(dateString);
 
     const options = {
