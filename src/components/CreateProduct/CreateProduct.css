@@ -1,0 +1,22 @@
+.form {
+  padding-top:80px;
+}
+
+.form__container-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__container-buttons button {
+  width: 140px;
+}
+
+@media screen and (max-width: 310px) {
+  .form__container-buttons {
+    flex-direction: column;
+  }
+
+  .form__container-buttons button {
+    width: 100%;
+  }
+}

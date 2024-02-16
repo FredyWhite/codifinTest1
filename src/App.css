@@ -1,0 +1,101 @@
+:root {
+  --background-color: #ecf0f3;
+  --text-color: #333;
+  --main-font: 'Arial', sans-serif;
+  --text-size: 16px;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+form {
+  width: 100%;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-decoration-color: gray;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+
+textarea {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  opacity: 0.8;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: -8px;
+  margin-bottom: 16px;
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box; 
+  margin-top: 20px;
+  color: gray;
+  padding: 10px 15px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: none;
+  background: #1DA1F2;
+  color: white;
+}
