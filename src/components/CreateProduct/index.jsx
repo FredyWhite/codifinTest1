@@ -26,7 +26,7 @@ const CreateProduct = () => {
         description: productDescription,
         creationDate: new Date().toISOString(),
         id: handleCreateRandomId(4),
-        quantity:0,
+        quantity: 0,
       };
 
       setProducts([...products, newProduct]);
@@ -70,56 +70,58 @@ const CreateProduct = () => {
       </button>
       <div className='form'>
         <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="productName">Product Name:</label>
-            <input
-              type="text"
-              id="productName"
-              placeholder='Enter the name'
-              value={productName}
-              onChange={(e) => setProductName(e.target.value)}
-            />
-            {errors.name && <p className="error">{errors.name}</p>}
-          </div>
+          <div className='form-container'>
+            <div>
+              <label htmlFor="productName">Product Name:</label>
+              <input
+                type="text"
+                id="productName"
+                placeholder='Enter the name'
+                value={productName}
+                onChange={(e) => setProductName(e.target.value)}
+              />
+              {errors.name && <p className="error">{errors.name}</p>}
+            </div>
 
-          <div>
-            <label htmlFor="productPrice">Product Price:</label>
-            <input
-              type="text"
-              id="productPrice"
-              placeholder='Enter the price'
-              value={productPrice}
-              onChange={(e) => setProductPrice(e.target.value)}
-            />
-            {errors.price && <p className="error">{errors.price}</p>}
-          </div>
+            <div>
+              <label htmlFor="productPrice">Product Price:</label>
+              <input
+                type="text"
+                id="productPrice"
+                placeholder='Enter the price'
+                value={productPrice}
+                onChange={(e) => setProductPrice(e.target.value)}
+              />
+              {errors.price && <p className="error">{errors.price}</p>}
+            </div>
 
-          <div>
-            <label htmlFor="productImage">Image URL:</label>
-            <input
-              type="text"
-              id="productImage"
-              placeholder='Enter the URL'
-              value={productImage}
-              onChange={(e) => setProductImage(e.target.value)}
-            />
-            {errors.image && <p className="error">{errors.image}</p>}
-          </div>
+            <div>
+              <label htmlFor="productImage">Image URL:</label>
+              <input
+                type="text"
+                id="productImage"
+                placeholder='Enter the URL'
+                value={productImage}
+                onChange={(e) => setProductImage(e.target.value)}
+              />
+              {errors.image && <p className="error">{errors.image}</p>}
+            </div>
 
-          <div>
-            <label htmlFor="productDescription">Product Description:</label>
-            <textarea
-              id="productDescription"
-              value={productDescription}
-              placeholder='Enter the description'
-              onChange={(e) => setProductDescription(e.target.value)}
-            />
-            {errors.description && <p className="error">{errors.description}</p>}
-          </div>
-          <div className='form__container-buttons'>
-            <button type="submit">
-              <span>Save Product</span>
-            </button>
+            <div>
+              <label htmlFor="productDescription">Product Description:</label>
+              <textarea
+                id="productDescription"
+                value={productDescription}
+                placeholder='Enter the description'
+                onChange={(e) => setProductDescription(e.target.value)}
+              />
+              {errors.description && <p className="error">{errors.description}</p>}
+            </div>
+            <div className='form__container-buttons'>
+              <button type="submit">
+                <span>Save Product</span>
+              </button>
+            </div>
           </div>
         </form>
       </div>
